@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/back"  >
+
+    <Button
+        android:id="@+id/btnQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="116dp"
+        android:text="@string/btnQ"
+        android:width="500dp"
+		android:background="@drawable/button_quitter"  />
+
+    <Button
+        android:id="@+id/btnS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAP"
+        android:layout_alignParentLeft="true"
+        android:text="@string/btnS"
+        android:width="500dp"
+		android:background="@drawable/button_statistiques" />
+
+    <Button
+        android:id="@+id/btnAP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnQ"
+        android:layout_alignParentLeft="true"
+        android:text="@string/btnAP"
+        android:width="500dp"
+		android:background="@drawable/button_apropos" />
+
+    <Button
+        android:id="@+id/btnE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnS"
+        android:layout_alignParentLeft="true"
+        android:text="@string/btnE"
+        android:width="500dp"
+		android:background="@drawable/button_evaluer" />
+
+    <Button
+        android:id="@+id/btnJ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnE"
+        android:layout_alignParentLeft="true"
+        android:text="@string/btnJ"
+        android:width="500dp"
+		android:background="@drawable/button_jouer" />
+
+</RelativeLayout>

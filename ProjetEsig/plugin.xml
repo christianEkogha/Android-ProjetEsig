@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="GenyMotion Category"
+            id="com.genymobile.genymotion.commands.category">
+      </category>
+      <command
+            name="GenyMotion Command"
+            categoryId="com.genymobile.genymotion.commands.category"
+            id="com.genymobile.genymotion.commands.genyMotionCommand">
+      </command>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="com.genymobile.genymotion.commands.genyMotionCommand"
+            class="com.genymobile.genymotion.ide.eclipse.actions.GenymotionHandler">
+      </handler>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.genymobile.genymotion.commands.genyMotionCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.genymobile.genymotion.toolbars.sampleToolbar">
+            <command
+                  commandId="com.genymobile.genymotion.commands.genyMotionCommand"
+                  icon="icons/genymotion_device_manager.png"
+                  tooltip="Genymotion Virtual Devices Manager"
+                  id="com.genymobile.genymotion.toolbars.genyMotionCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   
+   <extension
+      point = "org.eclipse.ui.preferencePages">
+      <page
+         id="com.genymobile.genymotion.preferences.main"
+         class="com.genymobile.genymotion.ide.eclipse.preferences.MainPage"
+         name="Genymobile">
+      </page>
+      <page
+         id="com.genymobile.genymotion.preferences.genymotion"
+         class="com.genymobile.genymotion.ide.eclipse.preferences.GenymotionPage"
+         name="Genymotion"
+         category="com.genymobile.genymotion.preferences.main">
+      </page>
+   </extension>
+
+</plugin>
